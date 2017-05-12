@@ -13,6 +13,7 @@ class SnapTimerBorderLayer: CALayer {
 	@NSManaged var startAngle: CGFloat
 	@NSManaged var radius: CGFloat
 	@NSManaged var width: CGFloat
+    open var isReseting: Bool = false
 
 	override init(layer: Any) {
 		super.init(layer: layer)
@@ -40,7 +41,7 @@ class SnapTimerBorderLayer: CALayer {
 			let value = pLayer.value(forKey: key) {
 			animation.fromValue = value
 		}
-
+    
 		let animationTiming = CATransaction.animationTimingFunction() ?? CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
 		let duration = CATransaction.animationDuration()
 		animation.timingFunction = animationTiming
@@ -50,8 +51,13 @@ class SnapTimerBorderLayer: CALayer {
 
 	override func action(forKey key: String) -> CAAction? {
 		if key == "startAngle" {
+            if isReseting {
+                isReseting = false
+                return nil
+            }
 			return self.animation(key)
 		}
+        
 		return super.action(forKey: key)
 	}
 

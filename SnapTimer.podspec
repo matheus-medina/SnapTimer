@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.author    = "Andres Canal"
   s.social_media_url   = "http://twitter.com/andangc"
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/andresinaka/SnapTimer.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/gutiago/SnapTimer.git", :tag => s.version }
   s.source_files  = "SnapTimer/**/*.swift"
 end

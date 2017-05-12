@@ -52,6 +52,7 @@ class SnapTimerBorderLayer: CALayer {
 	override func action(forKey key: String) -> CAAction? {
 		if key == "startAngle" {
             if isReseting {
+		removeAllAnimations()
                 isReseting = false
                 return nil
             }

@@ -137,9 +137,14 @@ import UIKit
         CATransaction.commit()
     }
     
-    open func resetOuter(toValue value: CGFloat) {
-        self.borderLayer.isReseting = true
+    open func setOuter(toValue value: CGFloat) {
+        self.borderLayer.isAnimated = false
         self.animateOuterValue(value)
+    }
+    
+    open func setInner(toValue value: CGFloat) {
+        self.centerLayer.isAnimated = false
+        self.animateInnerValue(value)
     }
     
     open func pauseAnimation() {

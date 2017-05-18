@@ -9,8 +9,8 @@
 import UIKit
 
 @IBDesignable open class SnapTimerView: UIView {
-    static let startAngle = 3/2 * CGFloat(M_PI)
-    static let endAngle = 7/2 * CGFloat(M_PI)
+    static let startAngle = 3/2 * CGFloat(Double.pi)
+    static let endAngle = 7/2 * CGFloat(Double.pi)
     
     internal var mainCircleLayer: SnapTimerCircleLayer!
     internal var centerLayer: SnapTimerCircleLayer!

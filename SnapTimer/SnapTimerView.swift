@@ -181,6 +181,6 @@ import UIKit
     
     internal class func radianForValue(_ value: CGFloat) -> CGFloat {
         let realValue = SnapTimerView.sanitizeValue(value)
-        return (realValue * 4/2 * CGFloat(M_PI) / 100) + SnapTimerView.startAngle
+        return (realValue * 4/2 * CGFloat(Double.pi) / 100) + SnapTimerView.startAngle
     }
 }

@@ -40,7 +40,7 @@ class SnapTimerCircleLayer: CALayer {
             animation.fromValue = value
         }
         
-        let animationTiming = CATransaction.animationTimingFunction() ?? CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        let animationTiming = CATransaction.animationTimingFunction() ?? CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         let duration = CATransaction.animationDuration()
         animation.timingFunction = animationTiming
         animation.duration = duration
